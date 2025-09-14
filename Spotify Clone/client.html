@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extract Song Info</title>
+</head>
+<body>
+    <script src="logic.js"></script>
+  <div id="wrapper">
+    <div class="directory">
+      <h1><a href="/">~</a> / <a href="/songs">songs</a> / </h1>
+      <ul id="files" class="view-tiles">
+        <li><a href="//songs/Angry_(mood)//" class="icon icon-directory" title="Angry_(mood)"><span class="name">Angry_(mood)</span></a></li>
+        <li><a href="//songs/Bright_(mood)//" class="icon icon-directory" title="Bright_(mood)"><span class="name">Bright_(mood)</span></a></li>
+        <li><a href="//songs/Chill_(mood)//" class="icon icon-directory" title="Chill_(mood)"><span class="name">Chill_(mood)</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Initialize an empty array to store song details
+    const songsArray = [];
+
+    // Get all <a> elements within the #files list
+    const songLinks = document.querySelectorAll('#files li a');
+
+    // Loop through each <a> element
+    songLinks.forEach(link => {
+      const songTitle = link.textContent.trim();  // Extract song name from the link text
+      const songLink = link.getAttribute('href'); // Get the link URL
+
+      // Extract singer and duration (simple logic based on songLink for this example)
+      const songDetails = {
+        songName: songTitle,
+        songLink: songLink,
+        singer: extractSinger(songLink),  // Simple function to extract singer
+        duration: extractDuration(songLink) // Simple function to extract duration
+      };
+
+      // Push the song details into the array
+      songsArray.push(songDetails);
+    });
+
+    // Helper function to extract singer (you can expand this logic)
+    function extractSinger(link) {
+      if (link.includes('Angry')) {
+        return 'Diljit';
+      } else if (link.includes('Bright')) {
+        return 'Unknown';
+      } else {
+        return 'Unknown';
+      }
+    }
+
+    // Helper function to extract duration (for now we use a static duration)
+    function extractDuration(link) {
+      return '3:30'; // Example static duration
+    }
+
+    // Output the array of song details to the console
+    console.log(songsArray);
+
+  </script>
+</body>
+</html>
