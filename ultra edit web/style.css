@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    
+}
+.mcontainer{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+ul{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+ul li{
+    justify-content: space-around;
+    justify-items: center;
+    display: flex;
+    
+}
+img{
+    height: 35px;
+    width: 100px;
+}
+.first{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+.first span{
+    font-size: 40px;
+}
+.first p{
+    font-size: 20px;
+    text-align: center;
+    width: 42vw;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+section div button{
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    background-color: #09a6bd;
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+.s2{
+    display: flex;
+    gap: 10px;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 26px;
+    padding: 33px;
+}
+.f1 p{
+    font-size: 30px;
+}
+ .third b{
+    height: 100px;
+    width: 50px;
+    background-color: black;
+}
+.grid{
+    margin: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+    height: 170px;
+    width: 230px;
+    border-radius: 20px;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    align-items: center;
+}
+.Blue{
+    background-color: blue;
+}
+.Green{
+    background-color: #5cb85c;
+}
+
+
